@@ -1,28 +1,31 @@
 buildscript {
     repositories {
-        jcenter()
+        maven { url 'https://maven.google.com' }
         google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+        classpath 'com.android.tools.build:gradle:8.1.4'
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+//        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        maven { url 'https://maven.google.com' }
         google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://plugins.gradle.org/m2/" }
     }
 }
 
 ext{
-    COMPILE_SDK=28
-    TARGET_SDK=28
-    MIN_SDK = 14
-    sourceCompatibilityVersion = JavaVersion.VERSION_1_8
-    targetCompatibilityVersion = JavaVersion.VERSION_1_8
+    sourceCompatibilityVersion = JavaVersion.VERSION_11
+    targetCompatibilityVersion = JavaVersion.VERSION_11
 
-    libraryVersion = "1.2.2"
+    libraryVersion = "1.1.9"
 }
